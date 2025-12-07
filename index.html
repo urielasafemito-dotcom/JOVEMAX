@@ -401,6 +401,41 @@
         flex-direction: column; /* Empilha logo e links verticalmente */
         align-items: flex-start;
     }
+	/* --- DENTRO do bloco @media (max-width: 768px) { ... } --- */
+
+@media (max-width: 768px) {
+    /* ... (outros ajustes para navbar, hero, about-content) ... */
+    
+    /* NOVO AJUSTE: Garante que os itens de contato fiquem empilhados e centralizados */
+    .contact-item {
+        /* Remove o layout flex para que o item ocupe 100% da largura */
+        display: block; 
+        
+        /* Centraliza o texto (ícone e texto) */
+        text-align: center;
+        
+        /* Reduz o espaçamento vertical */
+        margin: 15px 0;
+        
+        /* Reduz o tamanho da fonte para mobile */
+        font-size: 1.2rem;
+    }
+    
+    /* Alinha o ícone e o texto dentro do item de contato */
+    .contact-item i {
+        /* Ícone acima do texto */
+        display: block; 
+        /* Centraliza o ícone */
+        margin: 0 auto 5px auto; 
+        /* Aumenta o tamanho do ícone para dar destaque */
+        font-size: 1.8rem; 
+    }
+    
+    .contact-info p {
+        font-size: 1.1rem; /* Reduz um pouco o parágrafo introdutório */
+    }
+
+}
 
     .nav-links {
         margin-top: 15px;
@@ -600,4 +635,5 @@
 </body>
 
 </html>
+
 
