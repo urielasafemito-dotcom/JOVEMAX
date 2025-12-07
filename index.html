@@ -347,6 +347,79 @@
         .footer p {
             margin: 0;
         }
+		/* --- MEDIA QUERY: Estilos específicos para Celulares (Mobile First) --- */
+
+@media (max-width: 768px) {
+    
+    /* 1. Navegação (Header) */
+    .navbar {
+        flex-direction: column; /* Empilha logo e links verticalmente */
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav-links li {
+        display: block; 
+        margin: 10px 0;
+    }
+    
+    .logo {
+        margin-left: 0;
+    }
+    
+    /* 2. Hero Section */
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem; 
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* 3. Seções de Conteúdo (Geral) */
+    section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    /* 4. About Us (Conteúdo lado a lado) */
+    .about-content {
+        flex-direction: column; /* Elementos ficam um embaixo do outro */
+        gap: 30px;
+    }
+
+    .about-image {
+        max-width: 100%; /* Ocupa toda a largura disponível */
+        order: -1; /* Coloca a imagem/visual no topo no mobile */
+    }
+
+    /* 5. Services e Portfolio (Grid) */
+    /* Como o grid já usa 'auto-fit', as colunas vão para 1, mas vamos garantir o padding */
+    .services-grid, 
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Força 1 coluna em telas pequenas */
+        gap: 20px;
+    }
+    
+    /* 6. Formulário de Contato */
+    .contact-form {
+        padding: 20px;
+    }
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -472,4 +545,5 @@
     </footer>
 
 </body>
+
 </html>
