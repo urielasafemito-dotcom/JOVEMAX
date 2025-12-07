@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOVEMAX - Innovation for a Brighter Future</title>
+    <title>IMPULSE</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <link rel="icon" type="image/png" href="logo impulse.png">
@@ -334,6 +334,51 @@
             color: var(--color-text-light);
             border-color: var(--color-text-light);
         }
+		/* --- NOVO CSS para o Bloco de Contato Direto --- */
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil */
+    border-radius: 8px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.contact-item {
+    font-size: 1.4rem;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item i {
+    margin-right: 15px;
+    color: var(--color-accent); /* Cor de destaque (turquesa) */
+}
+
+.contact-link {
+    color: var(--color-text-light); /* Cor do link branco */
+    text-decoration: underline;
+    transition: color 0.3s;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    color: var(--color-accent); /* Muda para a cor de destaque no hover */
+}
+
+/* Remova o estilo do formulário antigo se ainda estiver no seu CSS: */
+.contact-form {
+    /* remova todo o conteúdo deste seletor */
+    /* ... ou apenas garanta que não haja conflito */
+}
 
         /* --- Footer --- */
         .footer {
@@ -431,7 +476,7 @@
                 <div class="logo">JOVEMAX</div>
                 <ul class="nav-links">
                     <li><a href="#hero">Inicío</a></li>
-                    <li><a href="#about">Saiba mais</a></li>
+                    <li><a href="#about">medicamentos</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">portfólio</a></li>
                     <li><a href="#contact">Contatos</a></li>
@@ -442,7 +487,7 @@
 
     <section id="hero" class="hero">
         <div class="container">
-            <h1>Medícamentos do Céu</h1>
+            <h1>Medicamentos do Céu</h1>
             <p>O medicamentos que vai revolucionar  o mundo!.</p>
             <a href="#services" class="btn">Saiba mais</a>
         </div>
@@ -453,11 +498,11 @@
             <div class="about-text">
                 <h2 class="section-title">O que é o JOVEMAX?</h2>
                 
-                <p>JOVEMAX, um medicamento simbolico  criado recentemente pelo agir de Deus, transformando vidas. Muitos que já usaram indicam ele para todos!
+                <p>JOVEMAX, um medicamento simbólico  criado recentemente pelo agir de Deus, transformando vidas. Muitos que já usaram indicam ele para todos!
   Ultimamente JOVEMAX vem fazendo muita popularidade pelas partes do Maranhão entre os jovens, mas está havendo humores de logo 
   ele será de livre acesso de todos: jovens, adultos, idosos e crianças.
    <em>"O JOVEMAX não é apenas um medicamento"</em> diz jovem após uso, <em>"é transformação do poder e da paz de Deus"</em>. 
-  O JOVEMAX vem com uma coleção que até o momento são mais de 9 medicamentemo diferentes, cada um com efeitos colaterais inacretitaveis.</p>
+  O JOVEMAX vem com uma coleção que até o momento são mais de 9 medicamentemo diferentes, cada um com efeitos inacretitaveis.</p>
                 <p></p>
                 <p></p>
             </div>
@@ -523,18 +568,26 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Entre em contato conosco:</h2>
-            <form action="#" method="POST" class="contact-form">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Messagem:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit" class="btn">Enviar</button>
-            </form>
+            <div class="contact-info">
+    <p>Pronto para inovar? Entre em contato diretamente:</p>
+    
+    <div class="contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <strong>WhatsApp:</strong> 
+        <a href="https://wa.me/559984794368" target="_blank" class="contact-link">
+            +55 99 8479-4368
+        </a>
+    </div>
+    
+    <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <strong>Email:</strong> 
+        <a href="mailto:UrielAsafemito@gmail.com" class="contact-link">
+            UrielAsafemito@gmail.com
+        </a>
+    </div>
+    
+</div>
         </div>
     </section>
 
@@ -547,3 +600,4 @@
 </body>
 
 </html>
+
