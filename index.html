@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOVEMAX - Innovation for a Brighter Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="logo impulse.png">
+    
+    
+	<style>
+        /* --- ESTILOS CSS --- */
+
+        /* Variáveis de Cores */
+        :root {
+            --color-primary: #007bff; /* Azul vibrante principal */
+            --color-secondary: #0056b3; /* Azul mais escuro para hover */
+            --color-background-dark: #0a192f; /* Azul escuro quase preto para fundo */
+            --color-background-light: #ffffff; /* Fundo branco para seções claras */
+            --color-text-light: #f0f8ff; /* Texto claro (quase branco) */
+            --color-text-dark: #333333; /* Texto escuro */
+            --color-accent: #64ffda; /* Ciano/Turquesa para destaque (opcional) */
+            --color-card-bg: #e0f7ff; /* Fundo de card/seção clara */
+            --color-gradient-start: #00aaff;
+            --color-gradient-end: #0055ff;
+        }
+
+        /* Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text-dark);
+            background-color: #f4f7f9; /* Fundo geral claro */
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-primary);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Container Geral */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header / Navegação --- */
+        .header {
+            background-color: var(--color-background-light);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--color-text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        /* --- Hero Section (Banner Principal) --- */
+        .hero {
+            background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+            color: var(--color-text-light);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efeito de onda sutil (minimalista) */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255, 255, 255, 0.1)" fill-opacity="1" d="M0,64L60,101.3C120,139,240,213,360,224C480,235,600,181,720,154.7C840,128,960,128,1080,149.3C1200,171,1320,213,1380,234.7L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--color-background-light);
+            color: var(--color-primary);
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+            border: 2px solid var(--color-background-light);
+        }
+
+        .btn:hover {
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            border-color: var(--color-primary);
+        }
+
+        /* --- Seções de Conteúdo (Geral) --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 60px;
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+
+        /* --- Seção About Us --- */
+        #about {
+            background-color: var(--color-background-light);
+            padding: 80px 0 40px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: var(--color-card-bg); /* Placeholder visual */
+            padding: 30px;
+            text-align: center;
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+        
+        /* --- Seção Services --- */
+        #services {
+            background-color: #f4f7f9;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--color-background-light);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid var(--color-primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--color-secondary);
+        }
+        
+        /* --- Seção Portfolio --- */
+        #portfolio {
+            background-color: var(--color-background-light);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 123, 255, 0.8);
+            color: var(--color-text-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* --- Seção Contact --- */
+        #contact {
+            background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+            color: var(--color-text-light);
+        }
+
+        #contact .section-title {
+            color: var(--color-text-light);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--color-text-dark);
+            font-family: inherit;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form .btn {
+            background-color: var(--color-text-light);
+            color: var(--color-primary);
+            border: 2px solid var(--color-text-light);
+        }
+
+        .contact-form .btn:hover {
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            border-color: var(--color-text-light);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--color-background-dark);
+            color: var(--color-text-light);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">JOVEMAX</div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Inicío</a></li>
+                    <li><a href="#about">Saiba mais</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">portfólio</a></li>
+                    <li><a href="#contact">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Medícamentos do Céu</h1>
+            <p>O medicamentos que vai revolucionar  o mundo!.</p>
+            <a href="#services" class="btn">Saiba mais</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2 class="section-title">O que é o JOVEMAX?</h2>
+                
+                <p>JOVEMAX, um medicamento simbolico  criado recentemente pelo agir de Deus, transformando vidas. Muitos que já usaram indicam ele para todos!
+  Ultimamente JOVEMAX vem fazendo muita popularidade pelas partes do Maranhão entre os jovens, mas está havendo humores de logo 
+  ele será de livre acesso de todos: jovens, adultos, idosos e crianças.
+   <em>"O JOVEMAX não é apenas um medicamento"</em> diz jovem após uso, <em>"é transformação do poder e da paz de Deus"</em>. 
+  O JOVEMAX vem com uma coleção que até o momento são mais de 9 medicamentemo diferentes, cada um com efeitos colaterais inacretitaveis.</p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="about-image">
+                <i class="fas fa-network-wired fa-5x"></i>
+                <p style="margin-top: 10px;">Conectados com o Céu</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>ESTRATÉGIA DIGITAL</h3>
+                    <p>Desenvolvimento de planos digitais robustos e focados em crescimento de mercado.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>DESENVOLVIMENTO DE SOFTWARE</h3>
+                    <p>Criação de softwares personalizados, escaláveis e de alta performance. Por Uriel :b</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>SOLUÇÕES EM NUVEM</h3>
+                    <p>Migração e gerenciamento de infraestrutura em nuvem, garantindo segurança e flexibilidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/007bff/ffffff?text=Project+Alpha" alt="Project Alpha Placeholder">
+                    <div class="portfolio-overlay">
+                        <h4>PROJECT ALPHA</h4>
+                        <p>Estratégia digital para startup.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/007bff/ffffff?text=Project+Beta" alt="Project Beta Placeholder">
+                    <div class="portfolio-overlay">
+                        <h4>PROJECT BETA</h4>
+                        <p>App de gestão empresarial.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/007bff/ffffff?text=Project+Gamma" alt="Project Gamma Placeholder">
+                    <div class="portfolio-overlay">
+                        <h4>PROJECT GAMMA</h4>
+                        <p>Migração de dados para Cloud.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em contato conosco:</h2>
+            <form action="#" method="POST" class="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Messagem:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 JOVEMAX. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
